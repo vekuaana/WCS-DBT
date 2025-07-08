@@ -2,10 +2,16 @@ models:
     - name : stg_orders
       columns:
         - name : order_id
+          tests:
+            - not_null
+            - unique
         - name: created_at 
         - name: customer_id
         - name: store_id 
     - name: stg_customers
       columns:
         - name: customer_id
+          tests:
+            - not_null
+            - unique
         - name: customer_name

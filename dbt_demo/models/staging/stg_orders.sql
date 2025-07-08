@@ -1,4 +1,4 @@
-with source as (
+with data_source as (
     select * from {{ source('my_dbt_db', 'raw_orders') }}
 ),
 renamed as (
@@ -7,8 +7,8 @@ renamed as (
         customer as customer_id,
         ordered_at as created_at,
         store_id
-    from source
+    from data_source
 )
-select * from source
+select * from renamed
 
 

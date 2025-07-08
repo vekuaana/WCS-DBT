@@ -1,0 +1,8 @@
+dbt-core
+dbt-mysql
+pandas
+pymysql
+python-dotenv
+sqlalchemy
+sqlalchemy_utils
+cryptography
